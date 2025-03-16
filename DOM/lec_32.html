@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dom</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Manipulation</title>
     <style>
-        .bg-black{
-            background: #212121;
-            color: white;
-        }
+      .bg-black {
+        background: #212121;
+        color: white;
+        text-align: center;
+      }
+
+      .highlight {
+        background-color: yellow;
+        color: red;
+        font-weight: bold;
+      }
+
+      .hidden {
+        display: none;
+      }
     </style>
-</head>
-<body class="bg-black">
-    <div class="bg-black">
-        <h1 id="topic" class="heading">Dom Learning</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, praesentium.</p>
-    </div>
-</body>
+  </head>
+  <body class="bg-black">
+    <!-- example-1 => Changing the paragraph text -->
+    <section id="example-1">
+      <h2>Accessing DOM Elements</h2>
+      <p id="myPara">Click me to see the changes</p>
+      <button id="button">Change Text</button>
+      <button id="togglePara">Toggle Paragraph</button>
+      <!-- New button -->
+    </section>
+
+    <!-- example-2 => Highlight first list item -->
+    <section id="example-2">
+      <h2>Traversing the DOM</h2>
+      <ul id="list">
+        <li>India</li>
+        <li>America</li>
+        <li>Russia</li>
+        <li>China</li>
+      </ul>
+      <button id="highlightFirstCity">Highlight First City</button>
+      <button id="removeLastCity">Remove Last City</button>
+      <!-- New button -->
+    </section>
+
+    <!-- example-3 => Change Coffee Order -->
+    <section id="example-3">
+      <h2>Manipulating DOM Elements</h2>
+      <div id="CoffeeOrder">
+        Order:
+        <span id="coffeeType">Latte</span>
+      </div>
+      <button id="clickOnMe">Change Order</button>
+      <input type="text" id="coffeeInput" placeholder="Enter new coffee" />
+      <button id="updateCoffee">Update Order</button>
+      <!--  New button -->
+    </section>
+
+    <!-- example-4 => Create and insert a new element -->
+    <section id="example-4">
+      <h2>Create and Insert a New Element</h2>
+      <input type="text" id="itemInput" placeholder="Enter new item" />
+      <button id="add">click to add New Item</button>
+      <ul id="itemList">
+        <li>bread</li>
+        <li>milk</li>
+        <li>curd</li>
+      </ul>
+      <button id="countItems">Count Items</button>
+      <p id="itemCount"></p>
+    </section>
+
+    <!-- example-5 => Change background color randomly -->
+    <section id="example-5">
+      <h2>Change Background Color</h2>
+      <button id="changeBg">Change Background</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
