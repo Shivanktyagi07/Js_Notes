@@ -1,13 +1,12 @@
 // Array declearation:
 
-const myArrays =[1, 2, 3, 4, 5]
+const myArrays = [1, 2, 3, 4, 5];
 
 // console.log(myArrays[0]);
 // console.log(myArrays[1]);
 // console.log(myArrays[2]);
 // console.log(myArrays[3]);
 // console.log(myArrays[4]);
-
 
 //Array methods:
 
@@ -19,15 +18,14 @@ const myArrays =[1, 2, 3, 4, 5]
 console.log(myArrays);
 console.log(myArrays.length);
 
-console.log(myArrays.includes(9));//it checks the value is present in array or not:
+console.log(myArrays.includes(9)); //it checks the value is present in array or not:
 
 console.log(myArrays.indexOf(3));
 
-const arr = myArrays.join() //this method change the object arry into string:
+const arr = myArrays.join(); //this method change the object arry into string:
 console.log(arr);
 console.log(typeof arr);
 console.log(typeof myArrays);
-
 
 //slice or splice:
 
@@ -36,12 +34,20 @@ console.log(typeof myArrays);
 
 console.log("A", myArrays);
 
-const myarr1=myArrays.slice(1,3)
+const myarr1 = myArrays.slice(1, 3);
 console.log(myarr1);
 
 console.log("B", myArrays);
 
-const myarr2=myArrays.splice(1,3)
+const myarr2 = myArrays.splice(1, 3);
 console.log(myarr2);
 
 console.log("C", myArrays);
+
+//UNDERSTANDING OF SLICE OPREATOR :->
+const arr2 = [10, 20, 30, 40, 50];
+console.log(arr2[0]);
+const newArr = arr2.slice(1, 3);
+console.log(newArr);
+
+console.log(arr2);

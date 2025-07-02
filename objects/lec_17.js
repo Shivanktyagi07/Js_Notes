@@ -1,42 +1,39 @@
-const User = {}
+const User = {};
 
-User.name = "Shivnak"
-User.age = " 20"
-User.isLoggedIn = false
-
-// console.log(User);
+User.name = "Shivnak";
+User.age = " 20";
+User.isLoggedIn = false;
 
 //object into object:
 const secondUser = {
-    email : "user@gmail.in",
-    userName : {
-        fullName : {
-            firstName : "Shivank",
-            lastName : "Tygai"
-        }
-    }
-}
+  email: "user@gmail.in",
+  userName: {
+    fullName: {
+      firstName: "Shivank",
+      lastName: "Tygai",
+    },
+  },
+};
 
 // console.log(secondUser);
 
-console.log(secondUser.userName.fullName.lastName);  //this is called nesting for accessing the values of nested objects:
+console.log(secondUser.userName.fullName.lastName); //this is called nesting for accessing the values of nested objects:
 
-
-//combine two or morew objects:
+//combine two or more objects:
 const obj1 = {
-    1 : "a",
-    2 : "b"
-}
+  1: "a",
+  2: "b",
+};
 const obj2 = {
-    3 : "c",
-    4 : "d"
-}
+  3: "c",
+  4: "d",
+};
 
-const obj3 = { obj1 , obj2}
-console.log( obj3 );
+const obj3 = { obj1, obj2 };
+console.log(obj3);
 
-const obj4 = Object.assign({}, obj1, obj2) // cuz assign mewthod return a new object:
-//here {} => targer & other values as Source : like this assign(target, source)
+const obj4 = Object.assign({}, obj1, obj2); // cuz assign method return a new object:
+//here {} => target & other values as Source : like this assign(target, source)
 
 console.log(obj4);
 
@@ -44,7 +41,5 @@ console.log(obj4);
 console.log(obj4[1]);
 
 //or we can combine also spread operaotr:
-const obj5 = {...obj1, ...obj2};
+const obj5 = { ...obj1, ...obj2 };
 console.log(obj5);
-
-
