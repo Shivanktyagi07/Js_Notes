@@ -1,37 +1,41 @@
-// Function Scoping:
+// ************** Function Scoping ************** //
 
-function one ()
-{
- const name = "Shivank"
+function one() {
+  const name = "Shivank";
 
- function two()
-  {
-    const lastName = "Tyagi"
-    console.log("Outer Function",name); // inner function can access the values of outer function:
-    console.log("Inner function :", lastName);
+  function two() {
+    const lastName = "Tyagi";
+    console.log("Outer Function:", name); // inner function can access outer function variable
+    console.log("Inner Function:", lastName); // lastName defined inside two()
   }
 
-  //console.log(lastName); //lastName can't access outside the func cuz of it';s scope: it gives error:
-   
+  // console.log(lastName)   Error: Cannot access lastName outside its scope
   two();
 }
 
 one();
 
+//  Note:
+// - Inner functions can access variables of their parent functions (Lexical Scope)
+// - But outer functions cannot access variables from their inner functions
 
-// **************hoisting************
-console.log(addone(5))
+// ************** Hoisting ************** //
 
-function addone (num){
-    return num+2
+//  This works because function declarations are hoisted completely
+console.log(addone(5)); // Output: 7
+
+function addone(num) {
+  return num + 2;
 }
- // in this above function execution is done without any error
 
-
-// but this function execution gives ab error: that is called hoisting 
+//  This gives error: Cannot access 'addTwo' before initialization
 console.log(addTwo);
 
-const addTwo = function (num){
-  return num+3;
-}
+const addTwo = function (num) {
+  return num + 3;
+};
 
+// Note:
+// - Function declarations are hoisted (can call before defining)
+// - Function expressions using `const`, `let` are NOT hoisted
+// - Variables declared with `const` and `let` are hoisted but stay in **temporal dead zone**
