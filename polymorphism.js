@@ -1,6 +1,11 @@
-// ==========================
-// Encapsulation & Abstraction
-// ==========================
+// ************ Polymorphism in JavaScript ************ //
+
+//  Polymorphism = "Many forms"
+// Means: Same method name behaves differently based on the object or class
+
+//  Achieved using: Method Overriding (in class inheritance)
+// Note: JavaScript doesn't support traditional method overloading like Java/C++
+
 class BankAccount {
   #balance; // Private property
 
@@ -8,7 +13,7 @@ class BankAccount {
     this.#balance = initialBalance;
   }
 
-  // Public method (Polymorphism - different subclasses can override)
+  // Public method (can be overridden by subclasses)
   deposit(amount) {
     if (amount > 0) {
       this.#balance += amount;
@@ -52,6 +57,7 @@ class SavingsAccount extends BankAccount {
   withdraw(amount) {
     if (amount > 0 && amount <= 0.9 * this.getBalance()) {
       // Now using getBalance()
+
       return super.withdraw(amount);
     } else {
       return "Withdrawal limit exceeded! You can withdraw up to 90% of your balance.";
