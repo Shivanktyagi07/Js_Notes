@@ -63,6 +63,7 @@ class SavingsAccount extends BankAccount {
       return "Withdrawal limit exceeded! You can withdraw up to 90% of your balance.";
     }
   }
+  
 
   applyInterest() {
     const interest = (this.interestRate / 100) * this.getBalance();

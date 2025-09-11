@@ -62,15 +62,17 @@ function fetchUserPromise(userId) {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log("User fetched");
-      resolve({ id: userId, name: "Alice" });
+      resolve({
+        id: userId,
+        name: "Alice",
+      });
     }, 2000);
   });
 }
 
-fetchUserPromise(1).then((user) => {
-  return fetchDataPromise().then((data) => {
-    console.log(`${user.name} received: ${data}`);
-  });
+fetchUserPromise(1).then(async (user) => {
+  const data = await fetchDataPromise();
+  console.log(`${user.name} received: ${data}`);
 });
 // This is cleaner, but we can improve it further.
 
