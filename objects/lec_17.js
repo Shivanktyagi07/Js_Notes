@@ -33,6 +33,7 @@ const obj3 = { obj1, obj2 };
 console.log(obj3);
 
 const obj4 = Object.assign({}, obj1, obj2); // cuz assign method return a new object:
+
 //here {} => target & other values as Source : like this assign(target, source)
 
 console.log(obj4);
